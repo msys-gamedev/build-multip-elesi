@@ -29,7 +29,7 @@
           memoryUrl: buildUrl + "/",
           symbolsUrl: buildUrl + "/",
           streamingAssetsUrl: "StreamingAssets",
-          companyName:  "DefaultCompany",
+          companyName:  "MultisysCorp",
           productName: "Elesi-Multiplayer",
           productVersion: "0.1",
         };
@@ -106,6 +106,16 @@
       window.addEventListener('offline', function(){
         unityInstance.SendMessage("Data Manager", "NoNetwork");
       });
+
+      function MuteAudio() {
+
+          unityInstance.SendMessage("Data Manager", "MuteAudio");
+      }
+
+      function UnMuteAudio() {
+
+          unityInstance.SendMessage("Data Manager", "UnMuteAudio");
+      }
 
 
       function startTimer() {
